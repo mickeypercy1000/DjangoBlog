@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#uy5n7mcwb6w(@n0#(8t1by@j2)-ctf()t_!&p^uqj#(zuuc()'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['mophylblog.herokuapp.com']
 
@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd6gi62tf4sj5pp',
-        'USER': 'xdlqaocyzrnrnc',
-        'PASSWORD': '6dfef31b997e06f4552aa8d717dadee4a5d153c9c9628af88db1afdd1a721860',
-        'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
+        'NAME': 'MophylBlog',
+        'USER': 'postgres',
+        'PASSWORD': 'Enigma.100',
+        'HOST': 'localhost',
         'PORT': '5432'
     }
 }

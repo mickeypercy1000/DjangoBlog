@@ -1,11 +1,12 @@
 from django.shortcuts import redirect, render
 
 from blog.forms import PostsForm, CategoryForm
-from blog.models import Posts
+from blog.models import Posts, Categories
 
 # Create your views here.
 def HomePageView(request):
-  return render(request, 'blog/HomePage.html')
+  context = {'trendingcategories' : Categories.objects.all()}
+  return render(request, 'blog/HomePage.html', context)
  
 
 def AddPostView(request):

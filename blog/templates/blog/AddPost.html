@@ -31,7 +31,8 @@
             <button class="btn btn-primary btn-md btn-block" type = "submit">Add Post</i></button>
           </div>
           <div class = "col-md-3">
-            <a class="btn btn-outline-secondary btn-md btn-block" href = "{% url 'add-category' %}">Add A Category</a> 
+            <a class="btn btn-outline-secondary btn-md btn-block" href = "{% url 'add-category' %}">Add A Category</a>
+            {{form.post_img|as_crispy_field}}
           </div>
         </div>
       </form>
