@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 
 from blog.forms import PostsForm, CategoryForm
-from blog.models import Posts, Categories
+from blog.models import Post, Categories
 
 # Create your views here.
 def HomePageView(request):
@@ -17,7 +17,7 @@ def AddPostView(request):
     return render(request, 'blog/AddPost.html', {'form': form})
 
 def UpdatePostView(request, id = id):
-    post = Posts.objects.get(pk =id)
+    post = Post.objects.get(pk =id)
     form  = PostsForm(instance = post)
     if request.method == "POST":
       form = PostsForm(request.POST, instance = post)
@@ -34,7 +34,7 @@ def AddCategoryView(request):
     return render(request, 'blog/AddCategory.html', {'form': form})
  
 def ListPostsView(request):
-  context = {'posts' : Posts.objects.all()}
+  context = {'posts' : Post.objects.all()}
   return render(request, 'blog/PostsList.html', context)
 
 def DeletePostsView(request, id = id):

@@ -1,9 +1,9 @@
 from django import forms
-from blog.models import Posts, Categories
+from blog.models import Post, Categories
 
 class PostsForm(forms.ModelForm):
   class Meta:
-    model = Posts
+    model = Post
     fields = ('title', 'slug', 'body', 'status', 'category', 'post_img')
     
   def __init__(self, *args, **kwargs):
