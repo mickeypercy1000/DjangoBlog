@@ -1,5 +1,4 @@
 {% extends 'blog/nav.html' %}
-
 {% load crispy_forms_tags %}
 
 
@@ -9,18 +8,19 @@
     <div class="jumbotron">
       <div class = "row">
         <div class = "col">
-          <h1 class="display-4 mb-6 text-center">Add New Category</h1>
+          <h1 class="display-4 mb-6 text-center">Update Category</h1>
           <div class = "row">
             <div class = "col-md-3">
-                <a class = "btn btn-info btn-block mb-3" href = "{% url 'add-post' %}">Add New Post</a>
+                <a class = "btn btn-info btn-block mb-3" href = "{% url 'add-post' %}">Update Category</a>
             </div>
             <div class = "col-md-3">
                 <a class = "btn btn-outline-secondary btn-block mb-3" href = "{% url 'posts' %}">View Post List</a>
             </div>
             <div class = "col-md-3">
-              <a class = "btn btn-primary btn-block mb-3" href = "/update-category/{{post.id}}">Edit Category</a>
+              <a class = "btn btn-primary btn-block mb-3" href = "{% url 'posts' %}">Edit Category</a>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <form action="" method="post" autocomplete="off">
@@ -28,7 +28,7 @@
         {{form.blog_categories|as_crispy_field}}
         {{form.category_summary|as_crispy_field}}
 
-            <button class="btn btn-secondary btn-md btn-block" type = "submit">Add Category</i></button>
+            <button class="btn btn-secondary btn-md btn-block" type = "submit">Update Category</i></button>
       </form>
     </div>
   </div>

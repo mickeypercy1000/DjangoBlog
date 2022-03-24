@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'MophylBlog',
-        'USER': 'postgres',
-        'PASSWORD': 'Enigma.100',
-        'HOST': 'localhost',
+        'NAME': 'dfv1430k5cimd8',
+        'USER': 'mboownltmzejfi',
+        'PASSWORD': '55230d1afb57e3118a014ca66c589c1662aadcaa19c2dd4dcb45669b9d9e3cef',
+        'HOST': 'ec2-54-157-79-121.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
@@ -144,5 +144,5 @@ STATIC_ROOT = [os.path.join(BASE_DIR, 'static')]
 django_heroku.settings(locals())
 
 #image saving
-MEDIA_URL = '/images/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

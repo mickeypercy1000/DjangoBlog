@@ -1,14 +1,18 @@
-{% extends 'blog/bloghome.html' %}
+{% extends 'blog/nav.html' %}
 
 {% block content %}
+<title>{{ BlogList }}</title>
 
 <div class="container mt-5">
   <div class="col-sm">
     <div class="jumbotron pt-5">
       <h1 class="display-4 mb-4">List Of Posts</h1>
-      <a class = "btn btn-outline-primary btn-block mb-3 col-md-3" href = "{% url 'add-post' %}">Add A Post</a>
+      <a class = "btn btn-outline-primary btn-block mb-3 col-md-2" href = "{% url 'add-post' %}">
+        <i class="fa fa-plus"></i>
+        Add A Post
+      </a>
 
-      <table class="table table-hover mt-5 display-6" id = "myTable">
+      <table class="table table-hover mt-1 display-6" id = "myTable">
         <thead class = "thead-dark">
             <tr>
               <th scope="col">ID</th>

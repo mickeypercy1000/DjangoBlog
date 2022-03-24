@@ -1,10 +1,10 @@
-{% extends 'blog/Base.html' %}
+{% include 'blog/nav.html' %}
 {% load crispy_forms_tags %}
 
 
 {% block content %}
 <div class="container-sm mt-5">
-  <div class="col-sm">
+  <div class="col-sm" >
     <div class="jumbotron">
       <div class = "row">
         <div class = "col-md-6">
@@ -13,7 +13,7 @@
 
         </div>
       </div>
-      <form action="" method="post" autocomplete="off">
+      <form action="" method="post" autocomplete="off" enctype = "multipart/form">
         {%csrf_token%}
         {{form.title|as_crispy_field}}
         {{form.slug|as_crispy_field}}
@@ -25,23 +25,18 @@
           <div class = "col-md-6">
             {{form.category|as_crispy_field}}
           </div>
-          </div>
+        </div>
         <div class = "row">
           <div class = "col-md-6">
             <button class="btn btn-primary btn-md btn-block" type = "submit">Add Post</i></button>
           </div>
           <div class = "col-md-3">
-            <a class="btn btn-outline-secondary btn-md btn-block" href = "{% url 'add-category' %}">Add A Category</a>
-            {{form.post_img|as_crispy_field}}
+            <a class="btn btn-outline-secondary btn-md btn-block" href = "{% url 'add-category' %}">Add A Category</a> 
           </div>
         </div>
       </form>
-      <div>
-      </div>
     </div>
   </div>
   </div>
-  
-
 
 {% endblock %}

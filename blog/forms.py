@@ -4,7 +4,7 @@ from blog.models import Post, Categories
 class PostsForm(forms.ModelForm):
   class Meta:
     model = Post
-    fields = ('title', 'slug', 'body', 'status', 'category', 'post_img')
+    fields = ('title', 'slug', 'body', 'status', 'category')
     
   def __init__(self, *args, **kwargs):
     super(PostsForm, self).__init__(*args, **kwargs)
@@ -14,4 +14,4 @@ class PostsForm(forms.ModelForm):
 class CategoryForm(forms.ModelForm):
   class Meta:
     model = Categories
-    fields = ('blog_categories', 'category_summary', 'category_img')
+    fields = ('blog_categories', 'category_summary')

@@ -1,5 +1,5 @@
 html,body {
-  background: #EFF3F4;
+  background: #ebf0f8;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 .hero-body .container {
@@ -20,7 +20,6 @@ html,body {
   border-radius: 0;
   border-left: none;
   border-right: none;
-  color: aqua;
 }
 .card-image > .fa {
   font-size: 8rem;
@@ -74,6 +73,12 @@ footer li:before {
   color: #147efb;
 }
 
-.modal-title{
-  color: rgb(233, 19, 19);
+.navbar.is-white {
+  background: #F0F2F4;
+  text-decoration: none!important;
+}
+.navbar-brand .brand-text {
+  font-size: 1.11rem;
+  font-weight: bold;
+  text-decoration: none!important;
 }
